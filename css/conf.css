@@ -1,0 +1,32 @@
+/* style.css */
+h2 {
+    color: #eef4fc; /* Cor azul */
+}
+
+.btn-custom-salvar {
+    background-color: #2b263a; /* Cor de fundo personalizada */
+    color: white; /* Cor do texto */
+    border: none;
+}
+
+.btn-custom-excluir {
+    background-color: rgb(125, 113, 139); /* Amarelo */
+    color: black;
+}
+  
+.btn-custom-salvar:hover {
+    background-color: #7e7496; /* Cor ao passar o mouse */
+}
+
+.btn-custom-excluir:hover {
+    background-color: #ca4949; /* Cor ao passar o mouse */
+}
+
+body {
+    background-color: #6c618f;
+    color: white;
+}
+
+.form-control {
+    border-color: #643568; /* Alterar a cor da borda dos campos de input */
+}

@@ -1,0 +1,187 @@
+/* Resetando margens e espaçamentos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos globais */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #1a1529;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #8906e6;
+}
+
+span{
+    color: #8906e6;
+}
+
+p {
+    font-size: 1rem;
+    color: #bbb5b5;
+}
+
+h5{
+    margin-top: 1rem;
+    color: #0097b2; /* cor da  logo*/
+}
+
+/* Navbar */
+header.navbar {
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+    height: 80px; /* Define uma altura fixa para o header */
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0; /* Remove padding dentro do header */
+    height: 100px; /* Igual ao navbar */
+    background-color: #cdccd4;
+    color: white;
+}
+
+/* Logo */
+.img-logo {
+    max-width: 100px; /* Diminui a logo */
+    height: auto;
+    margin-top: 10px; 
+    margin-bottom: 10px;
+}
+
+a{
+    color:#1a1529;
+}
+
+
+/* Seção de Serviços */
+section {
+    padding: 40px 0;
+}
+
+section h2 {
+    margin-bottom: 30px;
+}
+
+h2.text-center {
+    margin-top: 40px; /* Ajuste o valor conforme necessário */
+    margin-bottom: 40px; /* Aumenta o espaço abaixo do título */
+    font-size: 2rem; /* Ajuste o tamanho da fonte, se necessário */
+}
+
+
+section img {
+    max-width: 100%;
+}
+
+.servico-img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover; /* Ajusta o corte da imagem sem distorcer */
+    /* Caso queira deixar as imagens circulares */
+}
+
+
+section p {
+    font-size: 0.9rem;
+}
+
+/* Cards de Serviços Populares */
+.card {
+    transition: transform 0.3s ease-in-out;
+}
+
+.card-text p{
+    text-align: justify;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.serPop-img {
+    width:600px;
+    height: 200px;
+    object-fit: cover; /* Ajusta o corte da imagem sem distorcer */
+    /* Caso queira deixar as imagens circulares */
+}
+
+.btn-custom {
+    background-color: #5e517e; /* Cor de fundo personalizada */
+    color: white; /* Cor do texto */
+    border: none; /* Remove borda */
+  }
+  
+  .btn-custom:hover {
+    background-color: #7e7496; /* Cor ao passar o mouse */
+  }
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+
+    header {
+        padding: 5px 10px; /* Reduz o espaçamento */
+        height: auto; /* Permite que a altura se ajuste */
+    }
+
+    .navbar {
+        min-height: 50px; /* Define uma altura mínima menor para a barra de navegação */
+    }
+
+    .navbar-brand img {
+        max-width: 70px; /* Ajusta o tamanho da logo */
+    }
+
+    .navbar-nav .nav-item {
+        margin-bottom: 5px; /* Reduz margens entre os itens do menu */
+    }
+
+    .collapse {
+        padding: 3px 0; /* Reduz o padding do menu em telas pequenas */
+    }
+
+
+    section h2 {
+        font-size: 1.75rem;
+    }
+
+    section p {
+        font-size: 0.85rem;
+    }
+
+    .card-body h5 {
+        font-size: 1.1rem;
+    }
+
+    .card-body p {
+        font-size: 0.85rem;
+    }
+
+    .d-none.d-md-block {
+        display: none !important;
+    }
+
+    footer {
+        font-size: 0.9rem;
+    }
+}
+

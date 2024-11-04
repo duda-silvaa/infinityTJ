@@ -1,0 +1,31 @@
+
+        body {
+            background-color: #a9bacc; /* Cor de fundo clara */
+        }
+        .container {
+            max-width: 900px; /* Limitar a largura do container em telas maiores */
+        }
+        .faq-section {
+            background-color: #2b263a;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #393a9b; /* Cor azul para o título */
+        }
+
+        h3 {
+            color: #fff; /* Cor azul para o título */
+        }
+        .contact-form {
+            background-color:#2b263a;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            color: #fff;
+        }
+        .btn-custom {
+            background-color: #6d4086; 
+            color: #fff;
+        }

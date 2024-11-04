@@ -61,6 +61,44 @@ app.post('/login', (req, res) => {
     });
 });
 
+//rota de cadastro 
+app.post('/register', (req, res) => {
+    console.log("Requisição recebida em /register");
+
+    const { regNome, regEmail, regSenha } = req.body;
+
+    // Verifica se os campos foram preenchidos
+    if (!regNome || !regEmail || !regSenha) {
+        return res.status(400).json({ success: false, message: 'Preencha todos os campos' });
+    }
+
+    // Verifica se o email já está registrado
+    const checkUserSql = 'SELECT * FROM usuarios WHERE email = ?';
+    db.query(checkUserSql, [regEmail], (err, result) => {
+        if (err) {
+            console.error("Erro no banco de dados:", err);
+            return res.status(500).json({ success: false, message: 'Erro no servidor' });
+        }
+
+        if (result.length > 0) {
+            // Se o email já estiver registrado
+            return res.json({ success: false, message: 'Email já cadastrado' });
+        }
+
+        // Se o email não estiver registrado, insere o novo usuário
+        const insertUserSql = 'INSERT INTO usuarios (nome, email, senha) VALUES (?, ?, ?)';
+        db.query(insertUserSql, [regNome, regEmail, regSenha], (err, result) => {
+            if (err) {
+                console.error("Erro ao registrar usuário:", err);
+                return res.status(500).json({ success: false, message: 'Erro no servidor ao registrar usuário' });
+            }
+
+            res.json({ success: true, message: 'Usuário registrado com sucesso!' });
+        });
+    });
+});
+
+
 // Definindo a porta
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {

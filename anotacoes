@@ -1,0 +1,55 @@
+app.js 
+// Rota para solicitação de orçamento
+app.post('/budget', (req, res) => {
+    const { description, address } = req.body;
+
+    // Validações básicas
+    if (!description || !address) {
+        return res.status(400).json({ success: false, message: 'Preencha todos os campos' });
+    }
+
+    // Query para inserir a solicitação no banco de dados
+    const sql = 'INSERT INTO solicitacoes_orcamento (descricao, endereco) VALUES (?, ?)';
+    db.query(sql, [description, address], (err, result) => {
+        if (err) {
+            console.error("Erro ao inserir solicitação de orçamento:", err);
+            return res.status(500).json({ success: false, message: 'Erro no servidor ao registrar solicitação' });
+        }
+
+        res.json({ success: true, message: 'Solicitação de orçamento registrada com sucesso!' });
+    });
+});
+
+colocar no script 
+document.getElementById("budgetForm").addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    const description = document.getElementById("description").value;
+    const address = document.getElementById("address").value;
+
+    fetch('http://127.0.0.1:3000/budget', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ description, address })
+    })
+    .then(response => response.json())
+    .then(data => {
+        alert(data.message);
+    })
+    .catch(error => {
+        console.error("Erro ao enviar solicitação:", error);
+        alert("Ocorreu um erro ao enviar sua solicitação. Por favor, tente novamente.");
+    });
+});
+
+
+bd 
+CREATE TABLE solicitacoes_orcamento (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    descricao TEXT NOT NULL,
+    endereco VARCHAR(255) NOT NULL,
+    data_solicitacao TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+

@@ -1,0 +1,31 @@
+
+        body {
+            background-color: #a9bacc; 
+        }
+        .container {
+            max-width: 900px; 
+        }
+        .faq-section {
+            background-color: #2b263a;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #393a9b; 
+        }
+
+        h3 {
+            color: #fff; 
+        }
+        .contact-form {
+            background-color:#2b263a;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            color: #fff;
+        }
+        .btn-custom {
+            background-color: #6d4086; 
+            color: #fff;
+        }

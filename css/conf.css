@@ -1,0 +1,32 @@
+/* style.css */
+h2 {
+    color: #eef4fc; 
+}
+
+.btn-custom-salvar {
+    background-color: #2b263a; 
+    color: white; 
+    border: none;
+}
+
+.btn-custom-excluir {
+    background-color: rgb(125, 113, 139);
+    color: black;
+}
+  
+.btn-custom-salvar:hover {
+    background-color: #7e7496; 
+}
+
+.btn-custom-excluir:hover {
+    background-color: #ca4949; 
+}
+
+body {
+    background-color: #6c618f;
+    color: white;
+}
+
+.form-control {
+    border-color: #643568; 
+}

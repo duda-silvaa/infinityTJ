@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infinity TrabalheJá</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/pagInicial.css">
+    <link rel="icon" href="assets/6.png">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <header class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="index.html">
+            <img src="assets/6.png" class="img-logo" alt="logo">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a href="login.html" class="btn btn-custom">Login</a>
+              </li>
+              <li class="nav-item">
+                <a href="cadastro.html" class="btn btn-custom">Cadastra-se</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </header>
+
+
+  <!-- Campo de Pesquisa -->
+  <div class="container search-container mt-5 pt-5">
+    <div class="input-group mb-4">
+        <input type="text" class="form-control" placeholder="Pesquisar serviços..." aria-label="Pesquisar serviços" id="search-input">
+        <button class="btn btn-primary" type="button" onclick="searchFunction()">Pesquisar</button>
+    </div>
+  </div>
+
+
+    <!-- Seção de Serviços -->
+    <section class="container my-5">
+       
+        <div class="row text-center">
+            <div class="col-md-3 col-6">
+                <img src="assets/ar.jpg" alt="Serviço 1" class="servico-img">
+                <a href="login.html" style="text-decoration: none;"><h5>Técnico em Ar condicionado</h5></a>
+                <p>Responsável pela instalação, manutenção e reparo de sistemas de ar condicionado, como limpeza e higienização dos aparelhos.</p>
+            </div>
+            <div class="col-md-3 col-6">
+                <img src="assets/personalOrganizer.jpg" alt="Serviço 2" class="servico-img">
+                <a href="login.html" style="text-decoration: none;"><h5>Personal Organizer</h5></a>
+                <p>Organiza espaços de forma funcional e esteticamente agradável, através de técnicas de organização e armazenamento.</p>
+            </div>
+            <div class="col-md-3 col-6">
+                <img src="assets/diarista2.jpg" alt="Serviço 3" class="servico-img">
+                <a href="login.html" style="text-decoration: none;"><h5>Diarista</h5></a>
+                <p>A diarista é contratada para realizar tarefas de limpeza e organização em residências ou outros ambientes</p>
+            </div>
+            <div class="col-md-3 col-6">
+                <img src="assets/pintor.jpg" alt="Serviço 4" class="servico-img">
+                <a href="login.html" style="text-decoration: none;"><h5>Pintor</h5></a>
+                <p>Responsável por aplicar tintas e outros revestimentos em superfícies, como paredes, tetos, móveis e estruturas metálicas.</p>
+            </div>
+        </div>
+    </section>
+
+    <!--seção de destaque-->
+    <div class="container py-5">
+        <div class="card mb-3" style="max-width: 100%;">
+          <div class="row g-0">
+            <div class="col-md-6">
+              <div class="d-flex align-items-center justify-content-center" style="height: 100%; padding: 20px;">
+                <div class="card-body">
+                  <img src="assets/image.png" alt="" style="width: 50px; margin-bottom: 20px;">
+                  <h5 class="card-title">Pedreiro</h5>
+                  <p class="card-text" style="color: rgb(48, 46, 46)">Preparado para construção, reforma e reparo de estruturas de alvenaria, seguindo projetos e normas técnicas para garantir a segurança e a qualidade das obras.</p>
+                  <a href="login.html" class="btn btn-custom">Ver serviços</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 d-none d-md-block" style="background-color: #efe6f7; padding: 20px;">
+              <div class="d-flex align-items-center justify-content-center" style="height: 100%;">
+                <img src="assets/Imagens Infinity/Pedreiro.jpg" class="img-fluid" alt="Profissional">
+              </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    <!-- Seção de Serviços Populares -->
+    <section class="container my-5">
+        <h2 class="text-center mb-4">Principais Serviços Solicitados</h2>
+        <div class="row">
+            <div class="col-md-4 mb-3">
+                <div class="card">
+                    <img src="assets/Imagens Infinity/Serviço A.jpg" class="serPop-img" alt="Serviço A">
+                    <div class="card-body">
+                        <h5 class="card-title">Serviços gerais</h5>
+                        <p class="card-text" style="color: black">Profissionais responsáveis por atividades diversas de manutenção e apoio, como limpeza, pequenos reparos e organização de espaços. .</p>
+                        <a href="login.html" class="btn btn-custom">Solicitar orçamento</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <div class="card">
+                    <img src="assets/Imagens Infinity/Serviço C.jpg" class="serPop-img" alt="Serviço B">
+                    <div class="card-body">
+                        <h5 class="card-title">Marcenaria</h5>
+                        <p class="card-text" style="color: black">Utiliza habilidades artesanais para projetar e construir peças personalizadas, sempre atento a detalhes e acabamentos de qualidade.</p>
+                        <a href="login.html" class="btn btn-custom">Solicitar orçamento</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <div class="card">
+                    <img src="assets/Imagens Infinity/Serviço B.png" class="serPop-img" alt="Serviço C">
+                    <div class="card-body">
+                        <h5 class="card-title">Eletricista</h5>
+                        <p class="card-text" style="color: black">Especialista na instalação, manutenção e reparo de sistemas elétricos em ambientes residenciais, comerciais ou industriais.</p>
+                        <a href="login.html" class="btn btn-custom">Solicitar orçamento</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="bg-dark text-light py-4">
+      <div class="container text-center">
+          <p>&copy; 2024 - Infinity TrabalheJá.</p>
+      </div>
+
+  </footer>
+  
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

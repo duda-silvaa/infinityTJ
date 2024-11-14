@@ -1,0 +1,296 @@
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infinity TrabalheJá</title>
+    <link rel="icon" href="assets/6.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/pag2.css">
+</head>
+<body>
+
+    <header class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="pag2.html">
+            <img src="assets/6.png" class="img-logo" alt="logo">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="pag2.html">Página Inicial</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="suporte.html">Suporte</a>
+                </li>
+           
+            </ul>
+
+            <div class="search-container">
+                <div class="input-group">
+                  <input type="text" class="form-control" placeholder="Pesquisar serviços..." aria-label="Pesquisar serviços" id="search-input">
+                  <button class="btn btn-custom" type="button" onclick="searchFunction()">Pesquisar</button>
+                </div>
+              </div>
+
+
+              <ul class="navbar-nav">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <img src="assets/icons8-usuário-homem-com-círculo-48.png" alt="Usuário" width="30" height="30">
+                </a>
+                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="configuracoes.html">Configurações da Conta</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="index.html">Sair</a></li>
+                </ul>
+            </li>
+        </ul>
+
+          </div>
+        </div>
+      </header>
+
+      <section class="carousel-section">
+        <div class="container">
+            <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <!-- Slide 1 -->
+                    <div class="carousel-item active">
+                        <div class="row justify-content-center">
+                            <div class="col-md-4">
+                                <div class="card" style="background-color: #6e64a8; color: #ffffff; border: none;">
+                                    <img src="assets/personalOrganizer.jpg" class="serPop-img img-fluid" alt="Serviço B">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Personal Organizer</h5>
+                                        <p class="card-text">Organiza espaços de forma funcional e esteticamente agradável, através de técnicas de organização e armazenamento.</p>
+                                        <a href="solicitacao.html?servico=Marcenaria" class="btn btn-custom">Solicitar serviço</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card" style="background-color: #6e64a8; color: #ffffff; border: none;">
+                                    <img src="assets/novasImg/Psicopedagogo-ou-professor-particular-1024x726.jpeg" class="serPop-img" alt="Serviço C">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Educador Particular</h5>
+                                        <p class="card-text">Oferta aulas individuais ou em pequenos grupos, adaptando o conteúdo às necessidades específicas de cada aluno, promovendo um aprendizado personalizado e eficaz.</p>
+                                        <a href="#" class="btn btn-custom">Solicitar serviço</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card" style="background-color: #6e64a8; color: #ffffff; border: none;">
+                                    <img src="assets/novasImg/montador-de-moveis-2.jpg" class="serPop-img" alt="Serviço C">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Especialista em Montagem de Móveis</h5>
+                                        <p class="card-text">Profissional que monta, ajusta e instala móveis, garantindo que estejam firmes e bem posicionados, proporcionando praticidade e segurança para o ambiente.</p>
+                                        <a href="#" class="btn btn-custom">Solicitar serviço</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Slide 2 -->
+                    <div class="carousel-item">
+                        <div class="row justify-content-center">
+                            <div class="col-md-4">
+                                <div class="card" style="background-color: #6e64a8; color: #ffffff; border: none;">
+                                    <img src="assets/novasImg/profissionalti.jpg" class="serPop-img" alt="Serviço C">
+                      <div class="card-body">
+                        <h5 class="card-title">Desenvolvedor de Soluções Digitais </h5>
+                        <p class="card-text">Profissional da tecnologia que cria e mantém aplicativos, sites e sistemas, desenvolvendo soluções personalizadas para atender a necessidades específicas de empresas e indivíduos.</p>
+                        <a href="#" class="btn btn-custom">Solicitar serviço</a>
+                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card" style="background-color: #6e64a8; color: #ffffff; border: none;">
+                                    <img src="assets/novasImg/Vale-a-pena-ser-Cabeleireiro.jpeg" class="serPop-img" alt="Serviço C">
+                    <div class="card-body">
+                        <h5 class="card-title">Cabeleireiro</h5>
+                        <p class="card-text">Especializado em cuidados com os cabelos, oferecendo serviços como corte, coloração e tratamentos capilares para realçar a beleza e a personalidade de cada cliente.</p>
+                        <a href="#" class="btn btn-custom">Solicitar serviço</a>
+                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card" style="background-color: #6e64a8; color: #ffffff; border: none;">
+                                    <img src="assets/novasImg/jovem-designer-de-sucesso-criando-um-logotipo-1024x682.jpg" class="serPop-img" alt="Serviço C">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Designer Gráfico</h5>
+                                        <p class="card-text">Especialista na criação de identidades visuais, como logotipos, embalagens, e materiais de comunicação, combinando estética e funcionalidade para transmitir mensagens de forma criativa.</p>
+                                        <a href="#" class="btn btn-custom">Solicitar serviço</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Carousel controls -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev" style="position: absolute; top: 50%; left: -40px; transform: translateY(-50%); background-color: rgba(0, 0, 0, 0.5); border-radius: 50%; width: 40px; height: 40px;">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next" style="position: absolute; top: 50%; right: -40px; transform: translateY(-50%); background-color: rgba(0, 0, 0, 0.5); border-radius: 50%; width: 40px; height: 40px;">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+    </section>
+    
+      
+
+
+    <!-- Solicitação de Serviços -->
+    <section class="container my-5">
+        
+        <h2 class="text-center mb-4">
+            <span id="typed-title"></span>
+        </h2>
+
+        <div class="row">
+            <div class="col-md-3 mb-3">
+                <div class="card">
+                    <img src="assets/novasImg/istockphoto-1393418692-612x612.jpg" class="serPop-img" alt="Serviço A">
+                    <div class="card-body">
+                        <h5 class="card-title">Cuidador Infantil</h5>
+                        <p class="card-text">Profissional especializado em cuidar de crianças, proporcionando um ambiente seguro e acolhedor, com atividades que incentivam o desenvolvimento e o bem-estar dos pequenos.</p>
+                        <a href="#" class="btn btn-custom">Solicitar serviço</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-3">
+                <div class="card">
+                    <img src="assets/Imagens Infinity/Serviço C.jpg" class="serPop-img" alt="Serviço B">
+                    <div class="card-body">
+                        <h5 class="card-title">Marcenaria</h5>
+                        <p class="card-text">Utiliza habilidades artesanais para projetar e construir peças personalizadas, sempre atento a detalhes e acabamentos de qualidade.</p>
+                        <a href="solicitacao.html?servico=Marcenaria" class="btn btn-custom">Solicitar serviço</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-3">
+                <div class="card">
+                    <img src="assets/Imagens Infinity/Pedreiro.jpg" class="serPop-img" alt="Serviço C">
+                    <div class="card-body">
+                        <h5 class="card-title">Pedreiro</h5>
+                        <p class="card-text">Especialista na instalação, manutenção e reparo de sistemas elétricos em ambientes residenciais, comerciais ou industriais.</p>
+                        <a href="#" class="btn btn-custom">Solicitar serviço</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 mb-3">
+                <div class="card">
+                    <img src="assets/novasImg/125323990_714937479121748_5220408325439207114_n.jpg" class="serPop-img" alt="Serviço C">
+                    <div class="card-body">
+                        <h5 class="card-title">Cuidador de Animais de Estimação</h5>
+                        <p class="card-text">Dedicado ao cuidado de animais domésticos, oferecendo carinho, atenção e os cuidados necessários para garantir a saúde e o conforto dos pets, especialmente na ausência dos tutores.</p>
+                        <a href="#" class="btn btn-custom">Solicitar serviço</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-3">
+                <div class="card">
+                    <img src="assets/novasImg/vanessa-0001-1440x960.jpg" class="serPop-img" alt="Serviço C">
+                    <div class="card-body">
+                        <h5 class="card-title">Consultor de Eventos</h5>
+                        <p class="card-text">Planeja e organiza eventos, cuidando de todos os detalhes, como decoração, buffet, logística e programação, para que cada ocasião seja especial e inesquecível.</p>
+                        <a href="#" class="btn btn-custom">Solicitar serviço</a>
+                    </div>
+                </div>
+            </div>
+           
+            <div class="col-md-3 mb-3">
+                <div class="card">
+                    <img src="assets/novasImg/guia.jpeg" class="serPop-img" alt="Serviço C">
+                    <div class="card-body">
+                        <h5 class="card-title">Guia Turístico</h5>
+                        <p class="card-text">Acompanha e orienta visitantes em passeios e excursões, compartilhando informações sobre a história, a cultura e as curiosidades dos locais visitados, tornando a experiência mais rica.</p>
+                        <a href="#" class="btn btn-custom">Solicitar serviço</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-3 mb-3">
+                <div class="card">
+                    <img src="assets/novasImg/bb0c65d5-59cc-4677-9000-d1f8ca743f78.jpeg" class="serPop-img" alt="Serviço C">
+                    <div class="card-body">
+                        <h5 class="card-title">Personal Trainer</h5>
+                        <p class="card-text">Profissional que elabora e acompanha programas de exercícios físicos, adaptados aos objetivos e limitações de cada cliente, promovendo saúde e bem-estar com orientação personalizada.</p>
+                        <a href="#" class="btn btn-custom">Solicitar serviço</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-3">
+                <div class="card">
+                    <img src="assets/pintor.jpg" class="serPop-img" alt="Serviço C">
+                    <div class="card-body">
+                        <h5 class="card-title">Pintor</h5>
+                        <p class="card-text">Responsável por aplicar tintas e outros revestimentos em superfícies, como paredes, tetos, móveis e estruturas metálicas.</p>
+                        <a href="#" class="btn btn-custom">Solicitar serviço</a>
+                    </div>
+                </div>
+            </div>
+        
+        </div>
+    </section>
+
+
+    <!-- Seção - prestar servico 
+      <section class="container my-5">
+        <h2 class="text-center mb-4">Prestar serviço</h2>
+        <div class="row">
+            <div class="col-md-4 mb-3">
+                <div class="card">
+                    <img src="assets/Imagens Infinity/Serviço A.jpg" class="serPop-img" alt="Serviço A">
+                    <div class="card-body">
+                        <h5 class="card-title">Serviços gerais</h5>
+                        <p class="card-text">Profissionais responsáveis por atividades diversas de manutenção e apoio, como limpeza, pequenos reparos e organização de espaços. .</p>
+                        <a href="index.html" class="btn btn-custom">Prestar serviço</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <div class="card">
+                    <img src="assets/Imagens Infinity/Serviço C.jpg" class="serPop-img" alt="Serviço B">
+                    <div class="card-body">
+                        <h5 class="card-title">Marcenaria</h5>
+                        <p class="card-text">Utiliza habilidades artesanais para projetar e construir peças personalizadas, sempre atento a detalhes e acabamentos de qualidade.</p>
+                        <a href="index.html" class="btn btn-custom">Prestar serviço</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <div class="card">
+                    <img src="assets/Imagens Infinity/Serviço B.png" class="serPop-img" alt="Serviço C">
+                    <div class="card-body">
+                        <h5 class="card-title">Eletricista</h5>
+                        <p class="card-text">Especialista na instalação, manutenção e reparo de sistemas elétricos em ambientes residenciais, comerciais ou industriais.</p>
+                        <a href="index.html" class="btn btn-custom">Prestar serviço</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>  -->
+
+
+    <footer class="bg-dark text-light py-4">
+        <div class="container text-center">
+            <p class="footer-class">&copy; 2024 - Infinity TrabalheJá.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

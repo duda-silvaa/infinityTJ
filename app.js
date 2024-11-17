@@ -3,13 +3,16 @@ const mysql = require('mysql');
 const cors = require('cors');
 const app = express();
 const session = require('express-session');
+
 // Configuração do CORS para permitir requisições do front-end
 app.use(cors({
-    origin: 'http://127.0.0.1:5501', // Permite apenas o endereço específico do front-end
+    origin: '*', // Permite apenas o endereço específico do front-end 'http://127.0.0.1:5501'
     methods: ['GET', 'POST'],
     allowedHeaders: ['Content-Type', 'Authorization'],
     credentials: true
 }));
+
+
 
 
 app.use(session({

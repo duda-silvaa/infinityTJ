@@ -6,12 +6,11 @@ const session = require('express-session');
 
 // Configuração do CORS para permitir requisições do front-end
 app.use(cors({
-    origin: 'http://127.0.0.1:5501', 'https://infinity-tj.vercel.app', // Permite apenas o endereço específico do front-end 
+    origin: ['http://127.0.0.1:5501', 'https://infinity-tj.vercel.app'], // Permite apenas o endereço específico do front-end 
     methods: ['GET', 'POST'],
     allowedHeaders: ['Content-Type', 'Authorization'],
     credentials: true
 }));
-
 
 
 

@@ -113,7 +113,15 @@ document.addEventListener("DOMContentLoaded", function () {
           .then(response => response.json())
           .then(data => {
               console.log('Resposta recebida:', data);
-              alert(data.message);
+
+             // Abre o modal de confirmação
+             const confirmation = new bootstrap.Modal(document.getElementById('confirmation'));
+             confirmation.show();
+
+              // Limpa o formulário quando o modal é fechado
+              document.getElementById('confirmation').addEventListener('hidden.bs.modal', () => {
+            registerForm.reset();
+            });
           })
           .catch(error => {
               console.error("Erro durante o cadastro:", error);

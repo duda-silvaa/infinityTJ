@@ -168,7 +168,79 @@ app.post('/suporte', (req, res) => {
 });
 
 
+/*rota esqueceu senha -
+const nodemailer = require('nodemailer');
+const crypto = require('crypto');
 
+const transporter = nodemailer.createTransport({
+    service: 'gmail', // Provedor de e-mail (pode ser Gmail, Yahoo, Outlook, etc.)
+    auth: {
+      user: 'maria.eduarda.s19961@gmail.com', // O endereço de e-mail que enviará as mensagens
+      pass: 'comida19961', // Senha do e-mail ou senha de aplicativo
+    },
+  });
+  
+app.post('/forgot-password', async (req, res) => {
+    const { email } = req.body;
+  
+    try {
+      // Verificar se o e-mail existe no banco de dados
+      const user = await User.findOne({ email });
+      if (!user) {
+        return res.status(404).json({ success: false, message: 'E-mail não encontrado.' });
+      }
+  
+      // Gerar um token único
+      const token = crypto.randomBytes(32).toString('hex');
+      user.resetPasswordToken = token;
+      user.resetPasswordExpires = Date.now() + 3600000; // Token válido por 1 hora
+      await user.save();
+  
+      // Enviar o e-mail com o link de redefinição
+      const resetLink = `http://localhost:3000/reset-password?token=${token}`;
+      const mailOptions = {
+        from: 'seu_email@gmail.com',
+        to: email,
+        subject: 'Redefinição de senha',
+        text: `Clique no link para redefinir sua senha: ${resetLink}`,
+      };
+  
+      await transporter.sendMail(mailOptions);
+      res.json({ success: true, message: 'E-mail de recuperação enviado.' });
+    } catch (error) {
+      console.error('Erro ao enviar e-mail:', error);
+      res.status(500).json({ success: false, message: 'Erro no servidor.' });
+    }
+  });
+
+//rota atualizar senha no bd 
+app.post('/reset-password', async (req, res) => {
+    const { token, newPassword } = req.body;
+  
+    try {
+      // Encontrar o usuário pelo token
+      const user = await User.findOne({
+        resetPasswordToken: token,
+        resetPasswordExpires: { $gt: Date.now() }, // Verificar se o token ainda é válido
+      });
+  
+      if (!user) {
+        return res.status(400).json({ success: false, message: 'Token inválido ou expirado.' });
+      }
+  
+      // Atualizar a senha e limpar os campos de token
+      user.password = newPassword; // Lembre-se de criptografar a senha!
+      user.resetPasswordToken = undefined;
+      user.resetPasswordExpires = undefined;
+      await user.save();
+  
+      res.json({ success: true, message: 'Senha redefinida com sucesso.' });
+    } catch (error) {
+      console.error('Erro ao redefinir senha:', error);
+      res.status(500).json({ success: false, message: 'Erro no servidor.' });
+    }
+  }); */
+  
 
 // Definindo a porta
 const PORT = process.env.PORT || 3000;

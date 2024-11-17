@@ -9,6 +9,55 @@ body {
     color: #333;
     background-color: #1a1529;
 }
+header.navbar {
+    padding: 0;
+    margin: 0;
+    height: 80px;
+    background-color: #f9f9fc !important; 
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    height: 80px;
+    background-color:#f9f9fc;
+    color: white;
+}
+
+
+/* Menu Navbar e Dropdown */
+.navbar-collapse {
+    background-color: #f9f9fc !important;
+}
+
+.navbar-nav .nav-link {
+    background-color: transparent;
+    color: #1a1529;
+    padding: 8px 0;
+    margin: 0;
+}
+
+.dropdown-menu {
+    background-color: #f9f9fc!important;
+    border: none;
+}
+
+.dropdown-menu .dropdown-item {
+    color: #1a1529;
+}
+
+.dropdown-menu .dropdown-item:hover {
+    background-color: #7e7496; 
+}
+
+.carousel-section {
+    padding: 20px 0;
+}
+.carousel-item .card {
+    height: 100%;
+}
 
 h2 {
     font-size: 2rem;
@@ -58,3 +107,69 @@ footer {
 footer p {
     margin: 0;
 }
+
+
+
+/* Ajustes para dispositivos móveis */
+@media (max-width: 768px) {
+    .navbar-collapse {
+        padding: 10px;
+    }
+
+    .navbar-nav .nav-item {
+        margin-bottom: 5px;
+    }
+}
+
+/* Cards de Serviços Populares */
+.card {
+    transition: transform 0.3s ease-in-out;
+}
+
+.card-text p {
+    text-align: justify;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+/* Botão personalizado */
+.btn-custom {
+    background-color: #5e517e;
+    color: white;
+    border: none;
+}
+
+.btn-custom:hover {
+    background-color: #7e7496;
+}
+
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    font-size: 0.9rem;
+    padding: 20px 0;
+    text-align: center;
+}
+
+
+    header {
+        padding: 5px 10px;
+        height: auto;
+    }
+
+    .navbar-brand img {
+        max-width: 70px;
+    }
+
+    section h2 {
+        font-size: 1.75rem;
+    }
+
+    section p {
+        font-size: 0.85rem;
+    }
+

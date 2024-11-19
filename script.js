@@ -66,7 +66,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
           console.log('Tentando login com:', { email, senha });
 
-          fetch('http://127.0.0.1:3000/login', {
+          fetch('http://mysql://root:BzHxdTlEmHMeWEAeVmaZiGFfILQNiccA@junction.proxy.rlwy.net:38654/railway:3000/login', {
               method: 'POST',
               headers: {
                   'Content-Type': 'application/json'
@@ -102,7 +102,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
           console.log('Tentando registrar com:', { regNome, regEmail, regSenha });
 
-          fetch('http://127.0.0.1:3000/register', {
+          fetch('http://mysql://root:BzHxdTlEmHMeWEAeVmaZiGFfILQNiccA@junction.proxy.rlwy.net:38654/railway:3000/register', {
               method: 'POST',
               headers: {
                   'Content-Type': 'application/json'
@@ -160,7 +160,7 @@ document.addEventListener("DOMContentLoaded", function () {
           console.log('Tentando enviar solicitação com:', { servico, descricao, telefone });
 
           // Envia a requisição para o backend via fetch
-          fetch('http://127.0.0.1:3000/solicitacao-orcamento', {
+          fetch('http://mysql://root:BzHxdTlEmHMeWEAeVmaZiGFfILQNiccA@junction.proxy.rlwy.net:38654/railway:3000/solicitacao-orcamento', {
               method: 'POST',
               headers: {
                   'Content-Type': 'application/json'
@@ -204,7 +204,7 @@ if (suporteForm) {
 
         console.log('Tentando enviar para o suporte com:', { nomeSup, emailSup, messageSup });
 
-        fetch('http://127.0.0.1:3000/suporte', {
+        fetch('http://mysql://root:BzHxdTlEmHMeWEAeVmaZiGFfILQNiccA@junction.proxy.rlwy.net:38654/railway:3000/suporte', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

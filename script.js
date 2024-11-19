@@ -216,12 +216,9 @@ if (suporteForm) {
         .then(data => {
             if (data.success) {
                 suporteForm.reset(); 
-            } else {
-                alert("Ocorreu um problema: " + data.message); 
-            }
+            } 
         })
         .catch(error => {
-            console.error("Erro ao enviar a mensagem para o suporte:", error);
             alert("Ocorreu um erro. Por favor, tente novamente.");
         });
     });

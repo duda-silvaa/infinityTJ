@@ -25,11 +25,13 @@ app.use(session({
 
 // Configuração do banco de dados
 const db = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: '046024',
-    database: 'bdinfinitytrabalheja'
+    host: 'junction.proxy.rlwy.net', // Host do Railway
+    user: 'root',                    // Usuário do Railway
+    password: 'BzHxdTlEmHMeWEAeVmaZiGFfILQNiccA', // Senha do Railway
+    database: 'railway',             // Nome do banco no Railway
+    port: 38654                      // Porta fornecida pelo Railway
 });
+
 
 // Conecta ao banco de dados
 db.connect((err) => {

@@ -1,4 +1,4 @@
-require('dotenv').config();
+
 
 const express = require('express');
 const mysql = require('mysql');
@@ -23,7 +23,7 @@ app.use(session({
     cookie: { secure: false } // Defina como true se estiver usando HTTPS
 }));
 
-
+require('dotenv').config();
 
 // Configuração do banco de dados
 const db = mysql.createConnection({
